@@ -1,10 +1,13 @@
 :root {
-  --color-primary: #2f4f6f;
-  --color-secondary: #e8ecf0;
+  --color-primary: #007a3d;
+  --color-secondary: #eef6f0;
+  --color-accent: #c8102e;
+  --color-accent-dark: #a00d25;
   --color-bg: #ffffff;
-  --color-text: #1f2328;
-  --color-muted: #555d66;
-  --color-border: #c9d1d9;
+  --color-text: #1c2420;
+  --color-muted: #4f5b54;
+  --color-border: #cfdcd3;
+  --color-input-border: #6f8278;
   --color-success: #1e6b3a;
   --color-error: #a4262c;
   --radius: 6px;
@@ -101,7 +104,7 @@ textarea:focus-visible {
 }
 
 .site-header {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-accent);
   background: var(--color-bg);
 }
 
@@ -231,13 +234,14 @@ textarea:focus-visible {
 }
 
 .btn-primary {
-  background: var(--color-primary);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: #243d56;
-  border-color: #243d56;
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
 }
 
 .btn-secondary {
@@ -262,8 +266,8 @@ textarea:focus-visible {
   justify-content: center;
   aspect-ratio: 4 / 3;
   padding: 1rem;
-  background: repeating-linear-gradient(45deg, #dde3e9, #dde3e9 10px, #e8ecf0 10px, #e8ecf0 20px);
-  border: 2px dashed #8a96a3;
+  background: repeating-linear-gradient(45deg, #dcebe1, #dcebe1 10px, #eef6f0 10px, #eef6f0 20px);
+  border: 2px dashed var(--color-input-border);
   border-radius: var(--radius);
   color: var(--color-muted);
   font-weight: 600;
@@ -335,7 +339,7 @@ textarea:focus-visible {
   font: inherit;
   color: var(--color-text);
   background: var(--color-bg);
-  border: 1px solid #8a96a3;
+  border: 1px solid var(--color-input-border);
   border-radius: var(--radius);
 }
 
