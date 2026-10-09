@@ -343,6 +343,24 @@ textarea:focus-visible {
   resize: vertical;
 }
 
+.form-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.legal {
+  max-width: 75ch;
+}
+
+.legal h2 {
+  margin-top: 2rem;
+}
+
+.legal h2:first-child {
+  margin-top: 0;
+}
+
 .form-status {
   margin-top: 1rem;
   padding: 0;
