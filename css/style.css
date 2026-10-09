@@ -295,6 +295,10 @@ textarea:focus-visible {
   padding: 1rem;
 }
 
+.card > :last-child {
+  margin-bottom: 0;
+}
+
 .card .placeholder-img {
   margin-bottom: 1rem;
 }
@@ -463,9 +467,6 @@ textarea:focus-visible {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
-  }
 
   .header-inner {
     flex-wrap: nowrap;
