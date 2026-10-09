@@ -56,3 +56,21 @@ Modifiez ces valeurs : tout le site suit.
 3. **Branch** : `main`, dossier `/ (root)`, puis **Save**.
 
 Après quelques minutes, le site est en ligne à l'adresse : https://mathieu-jousson.github.io/Site_VVSD/
+
+
+
+
+
+
+Histoire création de l'asso :
+faire quelque chose de sa retraite, depuis 2021. 
+
+Nos missions : 
+
+
+Situation à Mada :
+
+
+Projets :
+
+
