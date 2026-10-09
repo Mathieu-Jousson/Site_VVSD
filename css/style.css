@@ -304,11 +304,6 @@ textarea:focus-visible {
 }
 
 .member-name {
-  margin-bottom: 0.25rem;
-}
-
-.member-role {
-  color: var(--color-muted);
   margin: 0;
 }
 
