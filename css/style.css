@@ -311,12 +311,6 @@ textarea:focus-visible {
   margin: 0;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
-}
-
 .contact-form {
   max-width: 600px;
 }
@@ -437,10 +431,6 @@ textarea:focus-visible {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .footer-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -466,7 +456,6 @@ textarea:focus-visible {
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
-
 
   .header-inner {
     flex-wrap: nowrap;
