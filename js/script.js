@@ -26,13 +26,19 @@
 
   var form = document.getElementById("contact-form");
   var status = document.getElementById("form-status");
+  var errorTemplate = document.getElementById("form-error");
 
-  if (form && status && window.fetch && window.FormData) {
+  if (form && status && errorTemplate && window.fetch && window.FormData) {
     var submitButton = form.querySelector("button[type='submit']");
 
-    var showStatus = function (type, message) {
+    var showStatus = function (type, content) {
       status.className = "form-status is-" + type;
-      status.textContent = message;
+      status.textContent = "";
+      if (typeof content === "string") {
+        status.textContent = content;
+      } else {
+        status.appendChild(content);
+      }
     };
 
     form.addEventListener("submit", function (event) {
@@ -58,7 +64,7 @@
           showStatus("success", "Merci ! Votre message a bien été envoyé. Nous vous répondrons dès que possible.");
         })
         .catch(function () {
-          showStatus("error", "Une erreur est survenue : votre message n'a pas pu être envoyé. Veuillez réessayer plus tard.");
+          showStatus("error", errorTemplate.content.cloneNode(true));
         })
         .then(function () {
           submitButton.disabled = false;

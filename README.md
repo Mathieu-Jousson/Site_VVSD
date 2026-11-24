@@ -15,22 +15,11 @@ En attendant la page HelloAsso, tous les boutons « Faire un don » mènent à `
 1. Remplacez partout `href="don.html"` par `href="https://www.helloasso.com/associations/..." target="_blank" rel="noopener"` (l'adresse de votre page HelloAsso).
 2. Supprimez le fichier `don.html`.
 
-## Activer le formulaire de contact
+## Formulaire de contact
 
-Le formulaire est prêt dans `contact.html`, mais il lui manque la clé Web3Forms. En attendant, les liens « Contact » mènent à `contact-bientot.html`, qui donne l'adresse e-mail de l'association.
+Le formulaire de `contact.html` passe par [Web3Forms](https://web3forms.com), qui transfère chaque message par e-mail à l'adresse de l'association. La clé Web3Forms se trouve dans le champ caché `access_key` de `contact.html`. Elle n'est pas secrète : elle peut rester visible dans le code du site.
 
-Pour obtenir la clé :
-
-1. Allez sur [web3forms.com](https://web3forms.com).
-2. Saisissez l'adresse e-mail qui recevra les messages du formulaire de contact.
-3. La clé (« Access Key ») arrive par e-mail.
-
-Cette clé n'est pas secrète : elle peut rester visible dans le code du site. Ensuite :
-
-1. Dans `contact.html`, remplacez `[CLÉ WEB3FORMS]` par la clé.
-2. Remplacez partout `contact-bientot.html` par `contact.html`.
-3. Supprimez le fichier `contact-bientot.html`.
-4. Envoyez-vous un message d'essai depuis le site pour vérifier qu'il arrive bien.
+Pour changer l'adresse qui reçoit les messages, ou régénérer la clé, passez par le tableau de bord de Web3Forms, puis remplacez la valeur de `access_key` si la clé change.
 
 ## Ajouter des photos
 
