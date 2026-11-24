@@ -4,47 +4,54 @@ Site vitrine de l'association **VEHIVAVY VONONA SAHY DIASPORA (VVSD)**. HTML, CS
 
 ## Modifier le contenu
 
-Les textes à compléter sont entre crochets dans les fichiers `.html` : `[TEXTE À REMPLIR]`, `[NOM 1]`, `[RÔLE 1]`, `[TITRE DU PROJET 1]`, etc. Cherchez `[` dans chaque page pour tous les trouver.
+Chaque page correspond à un fichier `.html` : `index.html` (accueil), `projets.html` (actus, projets et dons), `membres.html`, `mentions-legales.html`. Modifiez le texte directement entre les balises.
 
-Deux valeurs reviennent sur plusieurs pages. Remplacez-les partout en une fois, avec « Rechercher et remplacer dans les fichiers » de votre éditeur (VS Code : `Ctrl+Maj+H`) :
+Pour les rechercher-remplacer sur tout le site, utilisez « Rechercher et remplacer dans les fichiers » de votre éditeur (VS Code : `Ctrl+Maj+H`).
 
-- `[URL HELLOASSO]` → l'adresse de votre page de don HelloAsso (par exemple `https://www.helloasso.com/associations/...`) ;
-- `[CLÉ WEB3FORMS]` → votre clé Web3Forms (dans `contact.html`).
+## Activer les dons HelloAsso
 
-## Obtenir la clé Web3Forms
+En attendant la page HelloAsso, tous les boutons « Faire un don » mènent à `don.html`, qui annonce que les dons en ligne arrivent bientôt. Le jour où la page HelloAsso existe :
+
+1. Remplacez partout `href="don.html"` par `href="https://www.helloasso.com/associations/..." target="_blank" rel="noopener"` (l'adresse de votre page HelloAsso).
+2. Supprimez le fichier `don.html`.
+
+## Activer le formulaire de contact
+
+Le formulaire est prêt dans `contact.html`, mais il lui manque la clé Web3Forms. En attendant, les liens « Contact » mènent à `contact-bientot.html`, qui donne l'adresse e-mail de l'association.
+
+Pour obtenir la clé :
 
 1. Allez sur [web3forms.com](https://web3forms.com).
 2. Saisissez l'adresse e-mail qui recevra les messages du formulaire de contact.
-3. La clé (« Access Key ») arrive par e-mail. Collez-la à la place de `[CLÉ WEB3FORMS]`.
+3. La clé (« Access Key ») arrive par e-mail.
 
-Cette clé n'est pas secrète : elle peut rester visible dans le code du site.
+Cette clé n'est pas secrète : elle peut rester visible dans le code du site. Ensuite :
 
-## Ajouter les photos
+1. Dans `contact.html`, remplacez `[CLÉ WEB3FORMS]` par la clé.
+2. Remplacez partout `contact-bientot.html` par `contact.html`.
+3. Supprimez le fichier `contact-bientot.html`.
+4. Envoyez-vous un message d'essai depuis le site pour vérifier qu'il arrive bien.
 
-1. Déposez vos images dans `assets/img/` (par exemple `assets/img/projet-1.jpg`).
-2. Dans la page HTML, remplacez le bloc placeholder :
+## Ajouter des photos
+
+1. Réduisez la photo (environ 1000 pixels de large suffisent) et déposez-la dans `assets/img/` : `assets/img/membres/` pour l'équipe, `assets/img/actus/` pour les événements.
+2. Dans la page HTML, ajoutez l'image avec une description dans `alt` :
 
    ```html
-   <div class="placeholder-img" role="img" aria-label="[DESCRIPTION PHOTO PROJET 1]">[PHOTO À AJOUTER]</div>
+   <img src="assets/img/actus/ma-photo.jpg" alt="Description de la photo">
    ```
 
-   par une image, avec une description dans `alt` :
-
-   ```html
-   <img src="assets/img/projet-1.jpg" alt="Description de la photo">
-   ```
-
-Gardez des chemins relatifs (`assets/img/...`, sans `/` au début) pour que le site fonctionne sur GitHub Pages.
+Gardez des chemins relatifs (`assets/img/...`, sans `/` au début) pour que le site fonctionne sur GitHub Pages. Ne publiez une photo qu'avec l'accord des personnes qu'on y reconnaît.
 
 ## Changer les couleurs
 
 Les couleurs sont définies au début de `css/style.css`, dans `:root` :
 
 ```css
---color-primary: #2f4f6f;
---color-secondary: #e8ecf0;
---color-bg: #ffffff;
---color-text: #1f2328;
+--color-primary: #007a3d;
+--color-secondary: #faf5ec;
+--color-accent: #c8102e;
+--color-ochre: #d9a441;
 ```
 
 Modifiez ces valeurs : tout le site suit.

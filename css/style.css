@@ -228,7 +228,11 @@ textarea:focus-visible {
 .hero {
   position: relative;
   background: var(--color-secondary);
-  padding: 3rem 0 4.5rem;
+  padding: 3rem 0 3.5rem;
+}
+
+.hero .container > :last-child {
+  margin-bottom: 0;
 }
 
 .hero::after {
@@ -312,22 +316,6 @@ textarea:focus-visible {
   margin-top: 1.5rem;
 }
 
-.placeholder-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  aspect-ratio: 4 / 3;
-  padding: 1rem;
-  background: repeating-linear-gradient(45deg, #f1e7d6, #f1e7d6 10px, var(--color-secondary) 10px, var(--color-secondary) 20px);
-  border: 2px dashed var(--color-input-border);
-  border-radius: var(--radius);
-  color: var(--color-muted);
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -340,6 +328,60 @@ textarea:focus-visible {
   border-radius: var(--radius);
   padding: 1.25rem;
   box-shadow: var(--shadow);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.15rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.news-meta {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.news-photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.news-photos img,
+.photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.photo {
+  align-self: center;
+  box-shadow: var(--shadow);
+}
+
+.soon {
+  max-width: 640px;
+  padding: 2rem 1.5rem;
+}
+
+.soon .cta-group {
+  margin-top: 0.5rem;
 }
 
 .card-icon {
@@ -366,10 +408,6 @@ textarea:focus-visible {
 
 .card > :last-child {
   margin-bottom: 0;
-}
-
-.card .placeholder-img {
-  margin-bottom: 1rem;
 }
 
 .team {
@@ -557,7 +595,7 @@ textarea:focus-visible {
 
 @media (min-width: 600px) {
   .hero {
-    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g fill='%23eadcc3'><rect x='30' y='35' width='4' height='28' rx='2'/><g transform='rotate(-72 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(-60 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(-48 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(-36 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(-24 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(-12 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(0 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(12 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(24 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(36 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(48 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(60 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(72 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g></g></svg>") right 1.5rem bottom 2.5rem / 220px no-repeat, var(--color-secondary);
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g fill='%23eadcc3'><rect x='30' y='35' width='4' height='28' rx='2'/><g transform='rotate(-72 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(-60 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(-48 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(-36 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(-24 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(-12 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(0 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(12 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(24 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(36 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(48 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(60 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g><g transform='rotate(72 32 36)'><rect x='31.3' y='16' width='1.4' height='20'/><ellipse cx='32' cy='9.5' rx='3.3' ry='8.5'/></g></g></svg>") right 1.5rem bottom 2rem / auto calc(100% - 3.5rem) no-repeat, var(--color-secondary);
   }
 
   .hero .container {
@@ -576,6 +614,10 @@ textarea:focus-visible {
   .team {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .news-photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 900px) {
@@ -588,9 +630,8 @@ textarea:focus-visible {
   }
 
   .hero {
-    padding: 5rem 0 6.5rem;
-    background-position: right 4% bottom 3rem;
-    background-size: 300px;
+    padding: 5rem 0 4.5rem;
+    background-position: right 4% bottom 2rem;
   }
 
   .hero .container {
@@ -607,6 +648,10 @@ textarea:focus-visible {
 
   .team {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  .news-grid {
+    grid-template-columns: 2fr 1fr;
   }
 
   .header-inner {
