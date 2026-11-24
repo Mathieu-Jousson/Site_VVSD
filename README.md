@@ -52,3 +52,7 @@ Modifiez ces valeurs : tout le site suit.
 3. **Branch** : `main`, dossier `/ (root)`, puis **Save**.
 
 Après quelques minutes, le site est en ligne à l'adresse : https://mathieu-jousson.github.io/Site_VVSD/
+
+## Logo, icône d'onglet et aperçu de partage
+
+Ces images sont tirées du logo de l'association : `assets/img/logo-vvsd.jpg` (bandeau d'accueil), `assets/img/favicon-32.png` (icône de l'onglet), `assets/img/apple-touch-icon.png` (raccourci sur téléphone) et `assets/img/apercu-partage.jpg` (image affichée quand on partage le lien du site sur WhatsApp, Instagram, etc.). Si le logo change, il faut régénérer ces quatre fichiers en gardant les mêmes noms et dimensions.
