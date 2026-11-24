@@ -250,6 +250,21 @@ textarea:focus-visible {
   max-width: 60ch;
 }
 
+.hero-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.hero-logo {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  border-radius: 22%;
+  box-shadow: var(--shadow);
+}
+
 .section {
   padding: 2.5rem 0;
 }
@@ -602,6 +617,26 @@ textarea:focus-visible {
     padding-right: 200px;
   }
 
+  .hero-home {
+    background: var(--color-secondary);
+  }
+
+  .hero-home .container {
+    padding-right: 1rem;
+  }
+
+  .hero-brand {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .hero-logo {
+    width: 180px;
+    height: 180px;
+  }
+
   .grid-2,
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -636,6 +671,19 @@ textarea:focus-visible {
 
   .hero .container {
     padding-right: 320px;
+  }
+
+  .hero-home .container {
+    padding-right: 1rem;
+  }
+
+  .hero-brand {
+    gap: 3.5rem;
+  }
+
+  .hero-logo {
+    width: 220px;
+    height: 220px;
   }
 
   .section {
@@ -675,5 +723,17 @@ textarea:focus-visible {
 
   .nav-list a {
     padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero-logo {
+    align-self: stretch;
+    width: auto;
+    height: 100%;
+    min-width: 220px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    contain: size;
   }
 }
